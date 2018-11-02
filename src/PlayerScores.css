@@ -1,0 +1,11 @@
+.PlayerScores {}
+
+.PlayerScores-section {
+  display: inline-block;
+  vertical-align: top;
+  width: 10em;
+}
+
+.PlayerScores-section-lower {
+  margin-left: 3em;
+}

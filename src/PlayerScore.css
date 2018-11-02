@@ -1,0 +1,19 @@
+.PlayerScore {}
+
+.PlayerScore-active:hover {
+  background-color: yellow;
+}
+
+.PlayerScore td {
+  padding: 0.3em;
+  border-bottom: solid 1px black;
+}
+
+.PlayerScore-name {
+  width: 100%;
+  text-align: left;
+}
+
+.PlayerScore-score {
+  text-align: right;
+}
