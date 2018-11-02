@@ -1,0 +1,18 @@
+.DicePart1 {
+  fill:#FF724C;
+  stroke:#740000;
+  stroke-width:5;
+}
+
+.DicePart2 {
+  fill:none;
+  stroke:#000000;
+  stroke-width:7;
+}
+
+.DicePart3 {
+  stroke:#700;
+  stroke-width:119;
+  stroke-linecap:round;
+  stroke-dasharray:0,159
+}
