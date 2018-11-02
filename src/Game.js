@@ -10,7 +10,7 @@ class Game extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dice: Array.from({ length: NUM_DICE }),
+      dice: this.rollDiceAtStart(Array.from({ length: NUM_DICE })),
       locked: Array(NUM_DICE).fill(false),
       rollsLeft: NUM_ROLLS,
       scores: {
@@ -44,6 +44,10 @@ class Game extends Component {
     }));
   }
 
+  rollDiceAtStart(diceArray) {
+    return diceArray.map((d) => Math.ceil(Math.random() * 6));
+  }
+
   toggleLocked(idx) {
     // toggle whether idx is in locked or not
     this.setState(st => ({
@@ -57,7 +61,7 @@ class Game extends Component {
 
   doScore(rulename, ruleFn) {
     // evaluate this ruleFn with the dice and score this rulename
-    if (!this.state.scores[rulename]) {
+    if (this.state.scores[rulename] === undefined) {
       this.setState(st => ({
         scores: { ...st.scores, [rulename]: ruleFn(this.state.dice) },
         rollsLeft: NUM_ROLLS,
